@@ -1,0 +1,34 @@
+# Configuration for video action recognition
+
+# Video processing settings
+video:
+  frame_rate: 30
+  resize_width: 224
+  resize_height: 224
+  batch_size: 16
+
+# Model settings
+model:
+  name: "action_recognition_model"
+  input_shape: [224, 224, 3]
+  num_classes: 10
+  confidence_threshold: 0.5
+
+# Action classes (customize based on your needs)
+actions:
+  - "walking"
+  - "running"
+  - "sitting"
+  - "standing"
+  - "jumping"
+  - "waving"
+  - "clapping"
+  - "dancing"
+  - "eating"
+  - "drinking"
+
+# Output settings
+output:
+  save_annotated_video: true
+  show_live_preview: false
+  log_level: "INFO"
